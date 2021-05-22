@@ -1,9 +1,10 @@
+import 'dart:async';
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
 
 void main() => runApp(new MyApp());
 
@@ -29,6 +30,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
+//Color Picker
 List gradients = [
   [Color(0xFFFF9800), Color(0xFFEE0505)],
   [Color(0xFFFFFB03), Color(0xFFFF8E03)],
@@ -85,7 +87,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     return Container(
                         padding: const EdgeInsets.only(bottom: 25, top: 10),
                         decoration: BoxDecoration(
-                          // color: snapshot.data[id].color,
                           gradient: LinearGradient(
                               begin: Alignment.topRight,
                               end: Alignment.bottomLeft,
