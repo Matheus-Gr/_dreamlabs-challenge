@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 void main() => runApp(new MyApp());
 
@@ -78,7 +79,14 @@ class _MyHomePageState extends State<MyHomePage> {
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (snapshot.data == null) {
               return Container(
-                  child: Center(child: Text("Loading, please wait...")));
+                  child: Center(
+                      child: SpinKitCircle(
+                        color: Colors.lightBlue,
+                        size: 75.0,
+                      )
+                  )
+              )
+              ;
             } else {
               return ListView.separated(
                   padding: const EdgeInsets.all(15),
