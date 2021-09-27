@@ -156,6 +156,7 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(card.title),
+        backgroundColor: gradients[card.gradientId][0],
       ),
       body: new Container(
           padding: EdgeInsets.all(40),
